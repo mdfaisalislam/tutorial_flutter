@@ -23,8 +23,8 @@ class HomeDetailPage extends StatelessWidget {
                   backgroundColor:
                       MaterialStateProperty.all(MyTheme.darkBluishColor),
                   shape: MaterialStateProperty.all(StadiumBorder())),
-              child: "Buy".text.make(),
-            ).wh(100, 50)
+              child: "Add to cart".text.xl.bold.make(),
+            ).wh(150, 50)
           ],
         ).p24(),
       ),
@@ -46,17 +46,24 @@ class HomeDetailPage extends StatelessWidget {
                 child: Container(
                   color: Colors.white,
                   width: context.screenWidth,
-                  child: Column(
-                    children: [
-                      catalog.name.text.xl3.bold
-                          .color(MyTheme.darkBluishColor)
-                          .make(),
-                      catalog.desc.text
-                          .textStyle(context.captionStyle)
-                          .lg
-                          .make(),
-                    ],
-                  ).py64(),
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        catalog.name.text.xl3.bold
+                            .color(MyTheme.darkBluishColor)
+                            .make(),
+                        catalog.desc.text
+                            .textStyle(context.captionStyle)
+                            .lg
+                            .make(),
+                        "Gubergren labore sit dolores accusam dolor eos.Est magna sed sanctus magna diam ipsum et accusam eos, lorem rebum accusam dolore lorem sea ea diam. Dolores labore dolores labore duo diam et sanctus tempor amet."
+                            .text
+                            .textStyle(context.captionStyle)
+                            .make()
+                            .p16(),
+                      ],
+                    ).py64(),
+                  ),
                 ),
               ))
             ],
